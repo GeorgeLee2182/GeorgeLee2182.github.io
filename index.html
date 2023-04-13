@@ -19,9 +19,6 @@
 </header>
 
 <body>
-  <div class="container">
-    <button class="btn btn-primary" onclick="sendEmail()">Send email</button>
-  </div>
   <div class="container marketing mt-3">
   <div class="row d-flex align-items-center">
     <div class="col-md-6">
@@ -39,8 +36,8 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">     
-            <div class="card">
-              <h5 class="card-header text-center">Whats the main reason you want to speak to a broker today?</h5>
+            <div id="carousel-card" class="card">
+              <h5 class="card-header text-center">What's the main reason you want to speak to a broker today?</h5>
               <div class="card-body p-5">
                 <div class="card shadow mb-2">
                   <div class="card-body">
@@ -86,54 +83,27 @@
             </div>      
           </div>
           <div class="carousel-item">     
-            <div class="card">
-              <h5 class="card-header text-center">Whats the value of your property?</h5>
+            <div id="carousel-card" class="card">
+              <h5 class="card-header text-center">What's the value of your property?</h5>
               <div class="card-body p-5">
-                <div class="card shadow mb-2">
-                  <div class="card-body">
-                    <div class="form-check d-flex align-items-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Get more money
-                      </label>
-                    </div>
+                <div class="row">
+                  <div class="col text-left">
+                    <label for="property-value-slider" class="form-label">£50,000</label>
                   </div>
-                </div>
-                <div class="card shadow mb-2">
-                  <div class="card-body">
-                    <div class="form-check d-flex align-items-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        House fell down
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="card shadow mb-2">
-                  <div class="card-body">
-                    <div class="form-check d-flex align-items-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Buy a boat
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="card shadow mb-2">
-                  <div class="card-body">
-                    <div class="form-check d-flex align-items-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        For giggles
-                      </label>
-                    </div>
-                  </div>
-                </div>            
+                  <div class="col text-right">
+                    <label for="property-value-slider" class="form-label">£2,000,000</label>
+                  </div>                  
+                </div>               
+                <input type="range" class="form-range" min="50000" max="2000000" step="10000" id="property-value-slider" list="my-detents">
+                <div class="form-label text-center" id="slider-value"></div>
+                <datalist id="my-detents">
+                  <option value="2">
+                </datalist>           
               </div>
             </div>      
           </div>
           <div class="carousel-item">     
-            <div class="card">
+            <div id="carousel-card" class="card">
               <h5 class="card-header text-center">Current outstanding Mortgage Balance</h5>
               <div class="card-body p-5">
                 <div class="card shadow mb-2">
@@ -180,7 +150,7 @@
             </div>      
           </div>
           <div class="carousel-item">     
-            <div class="card">
+            <div id="carousel-card" class="card">
               <h5 class="card-header text-center">What's your name?</h5>
               <div class="card-body p-5">
                 <div class="card shadow mb-2">
@@ -227,7 +197,7 @@
             </div>      
           </div>
           <div class="carousel-item">     
-            <div class="card">
+            <div id="carousel-card" class="card">
               <h5 class="card-header text-center">Contact details.</h5>
               <div class="card-body p-5">
                 <div class="card shadow mb-2">
@@ -280,16 +250,23 @@
 <script type="text/javascript">
   function sendEmail() {
     $.ajax({
-    url: "https://formsubmit.co/ajax/georgelee2182@gmail.com",
-    method: "POST",
-    data: {
-        name: "Georget",
-        message: "Look what I did"
-    },
-    dataType: "json"
-});
+      url: "https://formsubmit.co/ajax/georgelee2182@gmail.com",
+      method: "POST",
+      data: {
+          name: "Georget",
+          message: "Look what I did"
+      },
+      dataType: "json"
+    });
   }
 
+  $('#property-value-slider').on('input', change);
+   // Change the 'change' to any other event slide, slideStart, etc.
+
+
+function change(e){
+    $('#slider-value').html("£" + $(this).val() + "<br/>");
+}
 </script>
   <style>
     .featurette-heading {
@@ -319,6 +296,7 @@
     .card-header {
       font-size: 40px;
       padding: 20px;
+      color: #006600;
     }
     .carousel-control-next,
     .carousel-control-prev, 
@@ -335,9 +313,14 @@
     .form-check-label {
       font-size: 20px;
     }
-    hr.new1 {
-    border-top: 1px solid red;
-  }
-    
+    .form-label {
+      font-size: 20px;
+    }
+    #carouselExampleIndicators .carousel-item #carousel-card {  
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height:600px;
+}
   </style>
 </html>
