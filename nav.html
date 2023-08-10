@@ -1,0 +1,137 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in touch</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    
+</head>
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-gradient border-bottom-3" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <img src="images/acorn_inc_ltd.png" class="me-4" style="max-height: 40px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="mortgages-dropdown" data-bs-toggle="dropdown" aria-expanded="false">Mortgages</a>
+            <ul class="dropdown-menu" aria-labelledby="mortgages-dropdown">
+              <li><a class="dropdown-item" href="mortgages/securedloans.html">Secured Loans</a></li>
+              <li><a class="dropdown-item" href="bridgingfinance.html">Bridging Finance</a></li>
+              <li><a class="dropdown-item" href="equityrelease.html">Equity Release</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="protection-dropdown" data-bs-toggle="dropdown" aria-expanded="false">Protection Products</a>
+            <ul class="dropdown-menu" aria-labelledby="protection-dropdown">
+              <li><a class="dropdown-item" href="mortgageandfamilyprotection.html">Mortgage and Family Protection</a></li>
+              <li><a class="dropdown-item" href="protectingyourincome.html">Protecting your Income</a></li>
+              <li><a class="dropdown-item" href="privatemedicalinsurance.html">Private Medical Insurance</a></li>
+              <li><a class="dropdown-item" href="insurance.html">Insurance</a></li>
+              <li><a class="dropdown-item" href="trusts.html">Trusts</a></li>
+              <li><a class="dropdown-item" href="wills.html">Wills</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="divider"></div>
+<style>
+	.nav_left {
+          background-color: #006600;
+          border-top-left-radius: 48px;
+          border-bottom-left-radius: 48px;
+      }
+      
+      .nav-tabs .nav-link.active {
+          background-color: transparent;
+          border-color: transparent;
+          border-top: 4px solid #fff;
+          color: #fff;
+      }
+      
+      .nav-tabs .nav-link {
+          border: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          margin: 0 50px 0 50px;
+          color: #fff;
+      }
+      
+      .nav-tabs {
+          border-bottom: none;
+      }
+      
+      .nav-link {
+          padding: 1rem 0.5rem;
+          color: #006600;
+      }
+      
+      .nav-link:focus,
+      .nav-link:hover {
+          color: #fff;
+      }
+      
+      .search_input {
+          width:100%;
+          border-radius: 10px;
+          border: none;
+          line-height: initial;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          color: #006600;
+      }
+      
+      .search_input:focus-visible {
+          outline: none;
+      }
+      
+      input.search_input::placeholder {
+          color: #cfd2ec;
+          vertical-align: middle;
+      }
+      
+      .search_img {
+          top: 7px;
+          right: 8px;
+      }
+      
+      .navbar-toggler {
+          border: 3px solid #f19159;
+      }
+      
+      .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(35, 76, 203, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      
+      .navbar-toggler:focus {
+          box-shadow: none;
+      }
+
+      .divider {
+            height: 1rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+</style>
