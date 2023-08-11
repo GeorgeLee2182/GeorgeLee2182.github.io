@@ -13,7 +13,7 @@
 </head>
 
 
-<nav class="navbar navbar-expand-md navbar-light bg-gradient border-bottom-3" aria-label="Fourth navbar example">
+<nav class="navbar navbar-expand-md navbar-fixed-top navbar-light border-bottom-3" style="background: #f5f5f5"aria-label="Fourth navbar example">
     <div class="container-fluid">
       <img src="images/acorn_inc_ltd.png" class="me-4" style="max-height: 40px;">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,14 +45,22 @@
               <li><a class="dropdown-item" href="insurance.html">Insurance</a></li>
               <li><a class="dropdown-item" href="trusts.html">Trusts</a></li>
               <li><a class="dropdown-item" href="wills.html">Wills</a></li>
+              
             </ul>
-          </li>
+          </li>      
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tel:01964622999">01964 622999</a>
+          </li>
+          <div class="divider"></div>
         </ul>
+        <div class="divider"></div>
       </div>
+      <div class="divider"></div>
     </div>
+    <div class="divider"></div>
   </nav>
   <div class="divider"></div>
 <style>
@@ -125,6 +133,13 @@
       
       .navbar-toggler:focus {
           box-shadow: none;
+      }
+      
+      .navbar {
+          position:fixed;
+          width:100%;
+          z-index: 1000000;
+          top:0;
       }
 
       .divider {
